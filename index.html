@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Rishabh</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Segoe UI',sans-serif;
+    text-align:center;
+    background:url("https://i.ibb.co/BVFWbZkk/Gemini-Generated-Image.png") center/cover fixed;
+    min-height:100vh;
+}
+body::before{
+    content:"";
+    position:fixed;inset:0;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(3px);
+    z-index:-1;
+}
+.marquee-container{
+    overflow:hidden;
+    background:rgba(255,255,255,.08);
+    padding:18px 0;
+}
+.marquee{
+    display:inline-block;
+    white-space:nowrap;
+    font-size:2rem;
+    font-weight:bold;
+    color:gold;
+    animation:move 30s linear infinite;
+}
+@keyframes move{
+    from{transform:translateX(100vw)}
+    to{transform:translateX(-100%)}
+}
+.content,.gallery{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+    padding:35px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+}
+h1{margin-bottom:20px}
+
+p{line-height:1.7}
+
+.video-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin:25px 0;
+}
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+    color:#fff;
+    font-weight:bold;
+}
+button:hover{transform:scale(1.05)}
+
+#videoContainer{display:none;margin-top:20px}
+
+iframe{
+    width:100%;
+    max-width:850px;
+    height:480px;
+    border-radius:15px;
+    border:none;
+}
+.gallerysection{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:nowrap;
+}
+#image{
+    width: min(90vw, 420px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+
+    transition: opacity 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.fade-out{opacity:0}
+.creator{
+    position:fixed;
+    bottom:10px;
+    right:15px;
+    padding:8px 15px;
+    border-radius:20px;
+    background:rgba(0,0,0,.5);
+    color:#fff;
+}
+
+.arrow{
+    width:55px;
+    height:55px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    border-radius:50%;
+
+    font-size:24px;
+    color:white;
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#0d6efd,#00b4ff);
+
+    transition:.3s;
+}
+
+.arrow:hover{
+    transform:scale(1.08);
+}
+</style>
+</head>
+<body>
+
+<div class="marquee-container">
+<div class="marquee">
+Dear Rishabh, Happy Birthday! Wishing you happiness, success and unforgettable memories. — Ranjeet
+</div>
+</div>
+
+<div class="content">
+<h1>🎂 Happy Birthday Rishabh Kumar Singh 🎂</h1>
+<p>Watch some special memories.</p>
+
+<div class="video-buttons">
+<button onclick="showVideo(1)">🎥 Video 1</button>
+<button onclick="showVideo(2)">🎥 Video 2</button>
+<button onclick="showVideo(3)">🎥 Video 3</button>
+<button onclick="showVideo(4)">🎥 Video 4</button>
+<button onclick="showVideo(5)">🎥 Video 5</button>
+</div>
+
+<div id="videoContainer">
+    <video id="player" controls playsinline style="width:100%;max-width:850px;border-radius:15px;">
+        Your browser does not support video.
+    </video>
+</div>
+</div>
+
+<div class="gallery">
+<h1>Rishabh's Moments </h1>
+<div class="gallerysection">
+<button id="larr">⬅</button>
+<img src="rishabh1.jpeg"
+     alt="image"
+     id="image">
+
+<button id="rarr">➡</button>
+</div>
+</div>
+
+<div class="content">
+<p><b>Dear Rishabh,</b><br><br>
+May your life always be filled with happiness, success, good health and endless opportunities.
+Happy Birthday! 🎉
+</div>
+
+
+
+<div class="creator">Created by Ranjeet</div>
+
+<script>
+// -------------------------
+// Elements
+// -------------------------
+const player = document.getElementById("player");
+const container = document.getElementById("videoContainer");
+const music = document.getElementById("bgMusic");
+
+// -------------------------
+// Videos
+// -------------------------
+const videos = [
+    "rishabh3video.mp4",
+    "rishabh4video.mp4",
+    "rishabh5video.mp4",
+    "rishabh video.mp4",
+    "rishabh2 video.mp4"
+];
+
+function showVideo(num) {
+
+    container.style.display = "block";
+
+    // Stop background music
+    if (music) {
+        music.pause();
+    }
+
+    // Stop previous video
+    player.pause();
+    player.currentTime = 0;
+
+    // Load new video
+    player.src = videos[num - 1];
+    player.load();
+
+    player.play().catch(err => console.log(err));
+}
+
+
+// -------------------------
+// Gallery
+// -------------------------
+let photoNumber = 0;
+
+const photos = [
+    "rishabh1.jpeg",
+    "rishabh2.jpeg",
+    "rishabh4.jpeg",
+    "rishabh5.jpeg",
+    "rishabh6.jpeg"
+];
+
+const img = document.getElementById("image");
+
+function showPhoto() {
+
+    const index = ((photoNumber % photos.length) + photos.length) % photos.length;
+
+    img.classList.add("fade-out");
+
+    setTimeout(() => {
+        img.src = photos[index];
+        img.classList.remove("fade-out");
+    }, 150);
+}
+
+document.getElementById("larr").addEventListener("click", () => {
+    photoNumber--;
+    showPhoto();
+});
+
+document.getElementById("rarr").addEventListener("click", () => {
+    photoNumber++;
+    showPhoto();
+});
+
+
+</script>
+
+</body>
+</html>
