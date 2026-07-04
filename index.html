@@ -5,127 +5,157 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Rishabh</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-    font-family:'Segoe UI',sans-serif;
-    text-align:center;
-    background:url("https://i.ibb.co/BVFWbZkk/Gemini-Generated-Image.png") center/cover fixed;
-    min-height:100vh;
-}
-body::before{
-    content:"";
-    position:fixed;inset:0;
-    background:rgba(0,0,0,.55);
-    backdrop-filter:blur(3px);
-    z-index:-1;
-}
-.marquee-container{
-    overflow:hidden;
-    background:rgba(255,255,255,.08);
-    padding:18px 0;
-}
-.marquee{
-    display:inline-block;
-    white-space:nowrap;
-    font-size:2rem;
-    font-weight:bold;
-    color:gold;
-    animation:move 30s linear infinite;
-}
-@keyframes move{
-    from{transform:translateX(100vw)}
-    to{transform:translateX(-100%)}
-}
-.content,.gallery{
-    width:90%;
-    max-width:1000px;
-    margin:40px auto;
-    padding:35px;
-    border-radius:20px;
-    background:rgba(255,255,255,.08);
-    color:#fff;
-}
-h1{margin-bottom:20px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+        font-family:'Segoe UI',sans-serif;
+        text-align:center;
+        background:url("https://i.ibb.co/BVFWbZkk/Gemini-Generated-Image.png") center/cover fixed;
+        min-height:100vh;
+    }
+    body::before{
+        content:"";
+        position:fixed;inset:0;
+        background:rgba(0,0,0,.55);
+        backdrop-filter:blur(3px);
+        z-index:-1;
+    }
+    .marquee-container{
+        overflow:hidden;
+        background:rgba(255,255,255,.08);
+        padding:18px 0;
+    }
+    .marquee{
+        display:inline-block;
+        white-space:nowrap;
+        font-size:2rem;
+        font-weight:bold;
+        color:gold;
+        animation:move 30s linear infinite;
+    }
+    @keyframes move{
+        from{transform:translateX(100vw)}
+        to{transform:translateX(-100%)}
+    }
+    .content,.gallery{
+        width:90%;
+        max-width:1000px;
+        margin:40px auto;
+        padding:35px;
+        border-radius:20px;
+        background:rgba(255,255,255,.08);
+        color:#fff;
+    }
+    h1{margin-bottom:20px}
 
-p{line-height:1.7}
+    p{line-height:1.7}
 
-.video-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-    margin:25px 0;
-}
-button{
-    padding:12px 25px;
-    border:none;
-    border-radius:40px;
-    cursor:pointer;
-    background:linear-gradient(135deg,#ff416c,#ff4b2b);
-    color:#fff;
-    font-weight:bold;
-}
-button:hover{transform:scale(1.05)}
+    .video-buttons{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+        margin:25px 0;
+    }
+    button{
+        padding:12px 25px;
+        border:none;
+        border-radius:40px;
+        cursor:pointer;
+        background:linear-gradient(135deg,#ff416c,#ff4b2b);
+        color:#fff;
+        font-weight:bold;
+    }
+    button:hover{transform:scale(1.05)}
 
-#videoContainer{display:none;margin-top:20px}
+    #videoContainer{display:none;margin-top:20px}
 
-iframe{
-    width:100%;
-    max-width:850px;
-    height:480px;
-    border-radius:15px;
-    border:none;
-}
-.gallerysection{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    flex-wrap:nowrap;
-}
-#image{
-    width: min(90vw, 420px);
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 20px;
+    iframe{
+        width:100%;
+        max-width:850px;
+        height:480px;
+        border-radius:15px;
+        border:none;
+    }
+    .gallerysection{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:15px;
+        flex-wrap:nowrap;
+    }
+    #image{
+        width: min(90vw, 420px);
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 20px;
 
-    transition: opacity 0.4s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-.fade-out{opacity:0}
-.creator{
-    position:fixed;
-    bottom:10px;
-    right:15px;
-    padding:8px 15px;
-    border-radius:20px;
-    background:rgba(0,0,0,.5);
-    color:#fff;
-}
+        transition: opacity 0.4s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    .fade-out{opacity:0}
+    .creator{
+        position:fixed;
+        bottom:10px;
+        right:15px;
+        padding:8px 15px;
+        border-radius:20px;
+        background:rgba(0,0,0,.5);
+        color:#fff;
+    }
 
-.arrow{
-    width:55px;
-    height:55px;
+    .arrow{
+        width:55px;
+        height:55px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
 
-    border:none;
-    border-radius:50%;
+        border:none;
+        border-radius:50%;
 
-    font-size:24px;
-    color:white;
-    cursor:pointer;
+        font-size:24px;
+        color:white;
+        cursor:pointer;
 
-    background:linear-gradient(135deg,#0d6efd,#00b4ff);
+        background:linear-gradient(135deg,#0d6efd,#00b4ff);
 
-    transition:.3s;
-}
+        transition:.3s;
+    }
 
-.arrow:hover{
-    transform:scale(1.08);
-}
+    .arrow:hover{
+        transform:scale(1.08);
+    }
+    /* Mobile View */
+    @media (max-width: 768px) {
+
+        .gallerysection{
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        #larr{
+            order: 1;
+        }
+
+        #image{
+            order: 2;
+            width: 90vw;
+            max-width: 350px;
+        }
+
+        #rarr{
+            order: 3;
+        }
+
+        .arrow,
+        #larr,
+        #rarr{
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+        }
+    }
 </style>
 </head>
 <body>
@@ -156,15 +186,15 @@ Dear Rishabh, Happy Birthday! Wishing you happiness, success and unforgettable m
 </div>
 
 <div class="gallery">
-<h1>Rishabh's Moments </h1>
-<div class="gallerysection">
-<button id="larr">⬅</button>
-<img src="rishabh1.jpeg"
-     alt="image"
-     id="image">
+    <h1>Rishabh's Moments </h1>
+    <div class="gallerysection">
 
-<button id="rarr">➡</button>
-</div>
+        <button id="larr" class="arrow">⬅</button>
+
+        <img src="rishabh1.jpeg" id="image">
+
+        <button id="rarr" class="arrow">➡</button>
+    </div>
 </div>
 
 <div class="content">
